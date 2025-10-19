@@ -6,9 +6,6 @@ const Employee = require("../models/Employee");
 // 🔑 JWT Secret
 const JWT_SECRET = process.env.JWT_SECRET || "a_default_secret_for_development";
 
-// ===============================
-// CUSTOMER LOGIN
-// ===============================
 exports.customerLogin = async (req, res) => {
   const { user_name, password } = req.body; 
   const customer_id = user_name; // frontend sends user_name, mapped to customer_id
